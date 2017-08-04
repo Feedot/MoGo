@@ -10,11 +10,14 @@
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="./css/styles.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $('a[href^="#"]').click(function () {
-                    elementClick = $(this).attr("href");
+                $('a[ref^="#"]').click(function () {
+                    elementClick = $(this).attr("ref");
                     destination = $(elementClick).offset().top;
                     $('body').animate( { scrollTop: destination }, 400 );
                     $('html').animate( { scrollTop: destination }, 400 );
@@ -29,7 +32,7 @@
     </head>
 <body>
     <div id="toUp" class="to_up active">
-        <a href="#home">
+        <a ref="#home">
             <img src="../img/up.png"><span>Go up</span>
         </a>
     </div>
@@ -37,18 +40,18 @@
         <header>
             <h1>MoGo</h1>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Service</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contacts">Contact</a></li>
+                <li><a ref="#about">About</a></li>
+                <li><a ref="#services">Service</a></li>
+                <li><a ref="#work">Work</a></li>
+                <li><a ref="#blog">Blog</a></li>
+                <li><a ref="#contacts">Contact</a></li>
             </ul>
             <ul id="ulMob" class="mob">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Service</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contacts">Contact</a></li>
+                <li><a ref="#about">About</a></li>
+                <li><a ref="#services">Service</a></li>
+                <li><a ref="#work">Work</a></li>
+                <li><a ref="#blog">Blog</a></li>
+                <li><a ref="#contacts">Contact</a></li>
             </ul>
             <input class="search" type="text" >
             <button id="openMenu" class="">
@@ -58,7 +61,7 @@
         <div class="">
             <h2>Creative Template</h2>
             <h1>Welcome</br> to MoGo</h1>
-            <a class="learn" href="#work">LEARN MORE</a>
+            <a class="learn" ref="#work">LEARN MORE</a>
             <span></span>
         </div>
         <ul class="floor">
@@ -140,35 +143,41 @@
                     </div>
                 </aside>
             </div>
-            <div class="slider">
-                <figure class="slide slide1">
-                    <img src="../img/speech.png" alt="">
-                    <div>
-                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                        </p>
-                        <p class="jon">Jon Doe</p>
+            <div id="locations" class="carousel slide slider" data-interval="3000" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <figure class="sliderr slide1">
+                            <img src="../img/speech.png" alt="">
+                            <div>
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                </p>
+                                <p class="jon">Jon Doe</p>
+                            </div>
+                        </figure>
                     </div>
-                </figure>
-                <figure class="slide slide2">
-                    <img src="../img/speech.png" alt="">
-                    <div>
-                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                        </p>
-                        <p class="jon">Jon Doe</p>
+                    <div class="item">
+                        <figure class="sliderr slide2">
+                            <img src="../img/speech.png" alt="">
+                            <div>
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                </p>
+                                <p class="jon">Jon Doe</p>
+                            </div>
+                        </figure>
                     </div>
-                </figure>
-                <figure class="slide slide3">
-                    <img src="../img/speech.png" alt="">
-                    <div>
-                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                        </p>
-                        <p class="jon">Jon Doe</p>
+                    <div class="item">
+                        <figure class="sliderr slide3">
+                            <img src="../img/speech.png" alt="">
+                            <div>
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                </p>
+                                <p class="jon">Jon Doe</p>
+                            </div>
+                        </figure>
                     </div>
-                </figure>
-            </div>
-            <div class="for_input">
-                <button id="nor" type="button" ><img src="../img/nor.png" alt=""></button>
-                <button id="rev" type="button" ><img src="../img/rev.png" alt=""></button>
+                    <a href="#locations" id="rev" data-slide="prev"><img src="../img/rev.png" alt=""></a>
+                    <a href="#locations" id="nor" data-slide="next"><img src="../img/nor.png" alt=""></a>
+                </div>
             </div>
         </div>
         <div class="who_are_we">
@@ -256,34 +265,40 @@
                 <img src="../img/high_building.jpg" alt="">
             </figure>
         </article>
-        <div class="slider">
-            <figure class="slide slide1">
-                <img src="../img/slide_men.jpg" alt="">
-                <div>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                    </p>
-                    <p class="jon">Joshua Earle</p>
+        <div id="locations_2" class="carousel slide slider" data-interval="3000" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <figure class="slide slide1">
+                        <img src="../img/slide_men.jpg" alt="">
+                        <div>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                            </p>
+                            <p class="jon">Joshua Earle</p>
+                        </div>
+                    </figure>
                 </div>
-            </figure>
-            <figure class="slide slide2">
-                <img src="../img/slide_men.jpg" alt="">
-                <div>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                    <p class="jon">Joshua Earle</p>
+                <div class="item">
+                    <figure class="slide slide2">
+                        <img src="../img/slide_men.jpg" alt="">
+                        <div>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            <p class="jon">Joshua Earle</p>
+                        </div>
+                    </figure>
                 </div>
-            </figure>
-            <figure class="slide slide3">
-                <img src="../img/slide_men.jpg" alt="">
-                <div>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                    </p>
-                    <p class="jon">Joshua Earle</p>
+                <div class="item">
+                    <figure class="slide slide3">
+                        <img src="../img/slide_men.jpg" alt="">
+                        <div>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                            </p>
+                            <p class="jon">Joshua Earle</p>
+                        </div>
+                    </figure>
                 </div>
-            </figure>
-        </div>
-        <div class="for_input">
-            <button id="nor2" type="button" ><img src="../img/nor.png" alt=""></button>
-            <button id="rev2" type="button" ><img src="../img/rev.png" alt=""></button>
+            </div>
+            <a href="#locations_2" id="nor2" data-slide="next"><img src="../img/nor.png" alt=""></a>
+            <a href="#locations_2" id="rev2" data-slide="prev" ><img src="../img/rev.png" alt=""></a>
         </div>
         <div class="happy_clients">
             <hgroup>
